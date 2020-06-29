@@ -1,7 +1,7 @@
 {
   "name": "@trustify/tipbot.ts",
   "version": "0.0.1",
-  "description": "",
+  "description": "Javascript Library for IOTA Tipbots. Written in Typescript.",
   "main": "lib/index.js",
   "private": false,
   "files": [
