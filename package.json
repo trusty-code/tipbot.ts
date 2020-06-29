@@ -35,6 +35,8 @@
   },
   "dependencies": {
     "@iota/checksum": "^1.0.0-beta.30",
-    "@types/bluebird": "^3.5.32"
+    "@types/bluebird": "^3.5.32",
+    "keyv": "^4.0.1",
+    "keyv-file": "^0.2.0"
   }
 }
