@@ -6,6 +6,7 @@
 npm install @trustify/tipbot.ts
 ```
 
+### Add
 ```javascript
 const tipbot = require('@trustify/tipbot.ts');
 
@@ -14,6 +15,17 @@ let response = await tipbot.add("Felix", "HYMYMBXAWOTQSSCMUHLTEZM9ODBRQHQXE9YYIT
 console.log(response)
 
 // -> Address added.
+```
+
+### Tip
+```javascript
+const tipbot = require('@trustify/tipbot.ts');
+
+let response = await tipbot.tip("Felix"
+
+console.log(response)
+
+// -> HYMYMBXAWOTQSSCMUHLTEZM9ODBRQHQXE9YYITUIQKTLMIKHMUTSETAQIFRCNKIVFNEETSXDNHAYHYSVCHPXUVQDMX
 ```
 
 ## How to develop
