@@ -2,9 +2,10 @@ const Keyv = require('keyv')
 const KeyvFile = require('keyv-file').KeyvFile
 const path = require('path');
 
-const keyv = new Keyv({
+let keyv = new Keyv({
   store: new KeyvFile()
 });
+
 // More options with default value:
 const customKeyv = new Keyv({
   store: new KeyvFile({
@@ -18,10 +19,17 @@ const customKeyv = new Keyv({
 
 
 export async function setAddress(user_id: string, address: string) {
-    await keyv.set(user_id, address)
+  console.log("keyv", keyv)  
+  await keyv.set(user_id, address)
 }
 
 export async function getAddress(user_id: string) {
+    console.log("keyv", keyv)
     let address = await keyv.get(user_id)
     return address;
+}
+export function setDB(database: string) {
+  console.log("database", database)
+
+  keyv = new Keyv(database);
 }
