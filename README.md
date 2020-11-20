@@ -21,7 +21,7 @@ console.log(response)
 ```javascript
 const tipbot = require('@trustify/tipbot.ts');
 
-let response = await tipbot.tip("Felix"
+let response = await tipbot.tip("Felix");
 
 console.log(response)
 
