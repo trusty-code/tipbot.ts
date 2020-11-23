@@ -10,7 +10,7 @@ export function add(user: string, address: string) {
     } else {
         return 'Error - Checksum is missing.';
     }
-  } catch (error) {
-    return 'Error - Probably Not A Valid IOTA Address';
-  }
+  } // catch (error) {
+  //  return 'Error - Probably Not A Valid IOTA Address';
+  // }
 }
