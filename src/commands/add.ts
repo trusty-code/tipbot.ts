@@ -8,9 +8,9 @@ export function add(user: string, address: string) {
         setAddress(user, address)
         return 'Address added.';
     } else {
-        return 'Error - Checksum is missing.';
+        return 'Error - Missing checksum.';
     }
   } catch (error) {
-    return 'Error - Probably Not A Valid IOTA Address';
+    return 'Error - Probably not a valid IOTA address';
   }
 }
