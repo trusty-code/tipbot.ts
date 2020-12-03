@@ -23,6 +23,11 @@ export async function setAddress(user_id: string, address: string) {
   await keyv.set(user_id, address)
 }
 
+export async function deleteUser(user_id: string) {
+  console.log("keyv", keyv)
+  await keyv.delete(user_id)
+}
+
 export async function getAddress(user_id: string) {
     console.log("keyv", keyv)
     let address = await keyv.get(user_id)
