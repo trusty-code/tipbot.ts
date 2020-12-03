@@ -1,6 +1,6 @@
-import { deleteUser } from '../database';
+import { deleteUser, getAddress } from '../database';
 
-export function delete(user: string) {
+export function del(user: string) {
     try {
         // Get address from user
         let address = getAddress(user)
