@@ -4,7 +4,7 @@ test('Add Valid Address', () => {
 });
 
 test('Try to Add without Checksum', () => {
-  expect(add('Carl', 'HYMYMBXAWOTQSSCMUHLTEZM9ODBRQHQXE9YYITUIQKTLMIKHMUTSETAQIFRCNKIVFNEETSXDNHAYHYSVC')).toBe("Error - Checksum is missing.")
+  expect(add('Carl', 'HYMYMBXAWOTQSSCMUHLTEZM9ODBRQHQXE9YYITUIQKTLMIKHMUTSETAQIFRCNKIVFNEETSXDNHAYHYSVC')).toBe("Error - Missing checksum.")
 });
 
 test('Try to Add Invalid Address', () => {
