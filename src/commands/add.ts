@@ -1,16 +1,21 @@
-import { isValidChecksum } from '@iota/checksum';
-import { setAddress } from '../database';
+import {setAddress} from '../database';
 
 export function add(user: string, address: string) {
-  try {
-    // Check if address has valid checksum
-    if (isValidChecksum(address)) {
+
+    if (!user) {
+        return 'Error - Missing user.';
+    }
+
+    if (isValidBech32AddressAndPrefix(address, "iota")) {
         setAddress(user, address)
         return 'Address added.';
+
     } else {
-        return 'Error - Missing checksum.';
+        return 'Error - Address is missing or not valid.';
     }
-  } catch (error) {
-    return 'Error - Probably not a valid IOTA address';
-  }
+
+    function isValidBech32AddressAndPrefix(addressToBeCheckedWithoutPrefix: string, expectedAddressPrefix: string): boolean {
+        return new RegExp(`^${expectedAddressPrefix}1[02-9ac-hj-np-z]{59}$`).test(addressToBeCheckedWithoutPrefix)
+    }
+
 }
