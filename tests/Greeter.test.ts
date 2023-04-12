@@ -1,4 +1,4 @@
-import { Greeter } from '../src';
-test('Using username to greet user', () => {
+import { Greeter } from '../src/index';
+test('My Greeter', () => {
   expect(Greeter('Carl')).toBe('Hello Carl');
 });

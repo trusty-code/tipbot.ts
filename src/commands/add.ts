@@ -1,4 +1,4 @@
-import {setUserAndAddress} from '../database';
+import {setAddress} from '../database';
 
 export function add(user: string, address: string) {
 
@@ -7,7 +7,7 @@ export function add(user: string, address: string) {
     }
 
     if (isValidBech32AddressAndPrefix(address, "iota")) {
-        setUserAndAddress(user, address);
+        setAddress(user, address)
         return 'Address added.';
 
     } else {
