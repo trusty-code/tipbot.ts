@@ -18,19 +18,19 @@ const customKeyv = new Keyv({
 })
 
 
-export async function setAddress(user_id: string, address: string) {
+export async function setUserAndAddress(user: string, address: string) {
   console.log("keyv", keyv)  
-  await keyv.set(user_id, address)
+  await keyv.set(user, address)
 }
 
-export async function deleteUser(user_id: string) {
+export async function deleteUser(user: string) {
   console.log("keyv", keyv)
-  await keyv.delete(user_id)
+  await keyv.delete(user)
 }
 
-export async function getAddress(user_id: string) {
+export async function getAddress(user: string) {
     console.log("keyv", keyv)
-    let address = await keyv.get(user_id)
+    let address = await keyv.get(user)
     return address;
 }
 export function setDB(database: string) {
