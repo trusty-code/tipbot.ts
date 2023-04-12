@@ -38,7 +38,7 @@
     "@keyv/postgres": "^1.0.16",
     "@trustify/tipbot.ts": "^1.3.2",
     "@types/bluebird": "^3.5.32",
-    "keyv": "^4.0.1",
+    "keyv": "^4.5.2",
     "keyv-file": "^0.2.0"
   }
 }
